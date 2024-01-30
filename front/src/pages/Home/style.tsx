@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { globalColors } from "../../global/globalStyles";
+import styled from 'styled-components';
+import { globalColors } from '../../global/globalStyles';
 
 export const PageContainer = styled.div`
   height: 100vh;
   background-color: ${globalColors.white};
-`
+`;
 
 export const CarouselContainer = styled.div`
   display: flex;
@@ -29,6 +29,4 @@ export const StyledH2 = styled.h2`
   text-decoration: underline;
   font-size: 1em;
   padding-left: 5.64%;
-`
-
-
+`;

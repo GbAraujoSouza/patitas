@@ -65,7 +65,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Rações</StyledH2>
       <CarouselContainer>
-        {productsData.map((product, index) => {
+        {productsData.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'racao') {
             return (
@@ -81,7 +81,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Brinquedos</StyledH2>
       <CarouselContainer>
-        {productsData.map((product, index) => {
+        {productsData.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'brinquedo') {
             return (
@@ -97,7 +97,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Farmácia</StyledH2>
       <CarouselContainer>
-        {productsData.map((product, index) => {
+        {productsData.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'farmacia') {
             return (
