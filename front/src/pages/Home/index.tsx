@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <PageContainer>
-      <Header></Header>
+      <Header showAddress userAddress="Rua Dionísio, 72 - apt 402"></Header>
       <CarouselContainer>
         <AnimalCategory
           type="Cachorro"

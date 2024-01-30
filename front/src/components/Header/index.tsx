@@ -1,18 +1,23 @@
-import { Container, HeaderAddress, Image } from './style';
+import { AddressInfo, Container, HeaderAddress, Image } from './style';
 import { Icon } from '@iconify/react';
 
-const Header = () => {
+interface HeaderProps {
+  showAddress?: boolean;
+  userAddress?: string;
+}
+
+const Header = ({showAddress, userAddress}: HeaderProps) => {
   return (
     <Container>
       <Image src={'/src/assets/logo.svg'} alt="logo-patitas" />
-      <HeaderAddress>
-        <Icon icon="ph:map-pin" />
-        <span>
-          Receber em <br />
-          Rua Dionísio, 72 - apt 402
-        </span>
-        <Icon icon="ei:chevron-down" width="30" height="30" />
-      </HeaderAddress>
+      {showAddress && <HeaderAddress>
+        <Icon icon="ph:map-pin" width="30" height="30" />
+        <AddressInfo>
+          <span>Receber em</span>
+          <span>{userAddress}</span>
+        </AddressInfo>
+        <Icon icon="ei:chevron-down" width="35" height="35" />
+      </HeaderAddress>}
     </Container>
   );
 };
