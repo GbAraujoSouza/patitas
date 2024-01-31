@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { globalColors } from '../../global/globalStyles';
 
+interface ImageLogoProps {
+  paddingBottom: string;
+}
+
 export const Container = styled.div`
   height: calc(100vh - 62px); // 62px == navbar height
   background-color: ${globalColors.white};
@@ -15,8 +19,8 @@ export const Container = styled.div`
   background-repeat: no-repeat;
 `;
 
-export const ImageLogo = styled.img`
-  padding: 1rem 0 1.5rem 0;
+export const ImageLogo = styled.img<ImageLogoProps>`
+  padding: 1rem 0 ${(prop) => prop.paddingBottom} 0;
 `;
 
 export const SearchBar = styled.div`

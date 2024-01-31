@@ -10,14 +10,21 @@ export const BenefitCardConteiner = styled.div`
   align-items: center;
   background-color: ${globalColors.mostarda};
   border-radius: 20px;
-  padding: 10px;
-  white-space: nowrap;
+  padding: 5px;
   width: 120px;
-  min-height: 120px;
+  height: 120px;
+  &:active {
+    background-color: ${globalColors.darkBlue};
+    
+  }
 `;
 
 export const BenefitText = styled.p`
   font-weight: bold;
+  text-align: center;
   color: ${globalColors.darkBlue};
+  &:active {
+    color: ${globalColors.white};
+  }
 `;
 
