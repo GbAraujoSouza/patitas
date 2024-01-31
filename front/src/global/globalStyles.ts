@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const globalColors = {
     darkBlue: '#154962',
+    lightBlue: '#99DFEB',
     white: '#F2F3F3',
     mostarda: '#EDA61A',
 };
