@@ -2,19 +2,11 @@ import { CarouselContainer, PageContainer, StyledH2, StyledH3 } from './style';
 import Header from '../../components/Header';
 import AnimalCategory from '../../components/AnimalCategory';
 import BenefitCard from '../../components/BenefitCard';
-import { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard';
 import NavBar from '../../components/NavBar';
-import CartItem from '../../components/CartItem';
+import productsStored from '../../constants/products.json';
 
 const Home = () => {
-  const [productsData, setProductsData] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:5173/src/constants/products.json')
-      .then((response) => response.json())
-      .then((productsList) => setProductsData(productsList));
-  },[]);
 
   return (
     <PageContainer>
@@ -62,7 +54,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Recomendado para você</StyledH2>
       <CarouselContainer>
-        {productsData.map((product, index) => {
+        {productsStored.map((product, index) => {
           if (index < 4) {
             const { id_product, name, price, imgUrl } = product;
             return (
@@ -79,7 +71,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Rações</StyledH2>
       <CarouselContainer>
-        {productsData.map((product) => {
+        {productsStored.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'racao') {
             return (
@@ -96,7 +88,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Brinquedos</StyledH2>
       <CarouselContainer>
-        {productsData.map((product) => {
+        {productsStored.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'brinquedo') {
             return (
@@ -113,7 +105,7 @@ const Home = () => {
       </CarouselContainer>
       <StyledH2>Farmácia</StyledH2>
       <CarouselContainer>
-        {productsData.map((product) => {
+        {productsStored.map((product) => {
           const { id_product, name, price, imgUrl, type } = product;
           if (type === 'farmacia') {
             return (
