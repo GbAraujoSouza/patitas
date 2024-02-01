@@ -1,3 +1,4 @@
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 import {
   Card,
   Image,
@@ -8,12 +9,15 @@ import {
 } from './style';
 
 interface CardProdutProps {
+  id: number;
   name: string;
   price: number;
   imgSrc: string;
 }
 
-const CardProdut = ({ imgSrc, name, price }: CardProdutProps) => {
+const CardProdut = ({ id, imgSrc, name, price }: CardProdutProps) => {
+  const {increaseCartQuatity} = useShoppingCart()
+
   return (
     <Card>
       <Image src={imgSrc} />
@@ -25,7 +29,7 @@ const CardProdut = ({ imgSrc, name, price }: CardProdutProps) => {
             {price}
           </ProductPrice>
         </InfoCard>
-        <img src="/src/assets/icons/Botao-de-mais.svg" alt="" />
+        <img src="/src/assets/icons/Botao-de-mais.svg" alt="" onClick={() => increaseCartQuatity(id)}/>
       </CardBody>
     </Card>
   );

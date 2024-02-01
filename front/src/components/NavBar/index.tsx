@@ -42,9 +42,11 @@ const NavBar = ({ currentPage }: NavBarProp) => {
           <Icon icon="uil:search" width="30" height="30" />
         </IconWrapper>
       </Link>
-      <IconWrapper $pageActive={currentPage === 'shopping'}>
-        <Icon icon="lucide:shopping-bag" width="30" height="30" />
-      </IconWrapper>
+      <Link to={'/cart'}>
+        <IconWrapper $pageActive={currentPage === 'shopping'}>
+          <Icon icon="lucide:shopping-bag" width="30" height="30" />
+        </IconWrapper>
+      </Link>
       <IconWrapper
         $pageActive={currentPage === 'profile'}
         onClick={() => setSideBar(!sideBar)}

@@ -13,7 +13,6 @@ interface ShoppingCartContext {
   getItemQuantity: (id: number) => number;
   increaseCartQuatity: (id: number) => void;
   decreaseCartQuatity: (id: number) => void;
-  removeFromCart: (id: number) => void;
   cartQuantity: number;
   cartItems: CartItem[];
 }
@@ -64,19 +63,12 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
     });
   }
 
-  function removeFromCart(id: number) {
-    setCartItems((currItems) => {
-      return currItems.filter((item) => item.id !== id);
-    });
-  }
-
   return (
     <ShoppingCartContext.Provider
       value={{
         getItemQuantity,
         increaseCartQuatity,
         decreaseCartQuatity,
-        removeFromCart,
         cartItems,
         cartQuantity,
       }}

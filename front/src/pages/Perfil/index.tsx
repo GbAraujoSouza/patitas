@@ -6,20 +6,14 @@ import {
   ConfigText,
   StyledParagrath,
   UserConfigInfo,
-  BackLink,
-  BackIconWrapper,
 } from './style';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import BackButton from '../../components/BackButton';
 
 const Perfil = () => {
   return (
     <Container>
-      <BackLink to="/">
-        <BackIconWrapper>
-          <Icon icon="tabler:chevron-left" width="30" height="30" />
-        </BackIconWrapper>
-        <span>Voltar</span>
-      </BackLink>
+      <BackButton to='/'></BackButton>
       <ProfileImg src="/src/assets/foto-perfil.png" />
       <StyledParagrath>Configurações de Perfil</StyledParagrath>
       <ConfigsContainer>

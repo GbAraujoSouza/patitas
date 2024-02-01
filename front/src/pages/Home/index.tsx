@@ -5,6 +5,7 @@ import BenefitCard from '../../components/BenefitCard';
 import { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard';
 import NavBar from '../../components/NavBar';
+import CartItem from '../../components/CartItem';
 
 const Home = () => {
   const [productsData, setProductsData] = useState([]);
@@ -13,7 +14,7 @@ const Home = () => {
     fetch('http://localhost:5173/src/constants/products.json')
       .then((response) => response.json())
       .then((productsList) => setProductsData(productsList));
-  });
+  },[]);
 
   return (
     <PageContainer>
@@ -67,6 +68,7 @@ const Home = () => {
             return (
               <ProductCard
                 key={id_product}
+                id={id_product}
                 name={name}
                 price={price}
                 imgSrc={imgUrl}
@@ -83,6 +85,7 @@ const Home = () => {
             return (
               <ProductCard
                 key={id_product}
+                id={id_product}
                 name={name}
                 price={price}
                 imgSrc={imgUrl}
@@ -99,6 +102,7 @@ const Home = () => {
             return (
               <ProductCard
                 key={id_product}
+                id={id_product}
                 name={name}
                 price={price}
                 imgSrc={imgUrl}
@@ -115,6 +119,7 @@ const Home = () => {
             return (
               <ProductCard
                 key={id_product}
+                id={id_product}
                 name={name}
                 price={price}
                 imgSrc={imgUrl}
