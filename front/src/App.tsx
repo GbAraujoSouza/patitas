@@ -1,18 +1,16 @@
 import { GlobalStyle } from './global/globalStyles'
-import Home from './pages/Home'
-import Search from './pages/Search'
-import Perfil from './pages/Perfil'
-import Fidelidade from './pages/Fidelidade'
+import Routes from './routes/Routes'
 
 function App() {
 
   return (
     <>
       <GlobalStyle/ >
+      <Routes/>
       {/* <Home /> */}
       {/* <Search/> */}
       {/* <Perfil/> */}
-      <Fidelidade/>
+      {/* <Fidelidade/> */}
     </>
   )
 }

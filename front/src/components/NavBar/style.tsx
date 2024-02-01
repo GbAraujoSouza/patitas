@@ -27,4 +27,7 @@ export const IconWrapper = styled.span<{$pageActive?: boolean;}>`
     position: absolute;
     background-color: ${globalColors.white};
   }`}
+  > svg {
+    color: ${globalColors.white};
+  }
 `;

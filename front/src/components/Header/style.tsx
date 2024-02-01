@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { globalColors } from '../../global/globalStyles';
-import { Icon } from '@iconify/react/dist/iconify.js';
 
 export const Container = styled.div`
   display: flex;

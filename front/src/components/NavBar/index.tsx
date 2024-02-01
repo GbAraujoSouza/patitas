@@ -1,25 +1,57 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { IconWrapper, NavContainer } from './style';
+import { Link } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import SideBar from '../SideBar';
 
 interface NavBarProp {
   currentPage: string;
 }
 
 const NavBar = ({ currentPage }: NavBarProp) => {
+  const [sideBar, setSideBar] = useState(false);
+
+  const toggleSideBar = (open:boolean) => setSideBar(open);
+
+  const sideBarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (sideBarRef.current && !sideBarRef.current.contains(event.target as Node)) {
+        setSideBar(!sideBar);
+      }
+    };
+
+    if(sideBar) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, [sideBar])
+
   return (
     <NavContainer>
-      <IconWrapper $pageActive={currentPage === 'home'}>
-        <Icon icon="uil:home-alt" width="30" height="30" />
-      </IconWrapper>
-      <IconWrapper $pageActive={currentPage === 'search'}>
-        <Icon icon="uil:search" width="30" height="30" />
-      </IconWrapper>
+      <Link to={'/'}>
+        <IconWrapper $pageActive={currentPage === 'home'}>
+          <Icon icon="uil:home-alt" width="30" height="30" />
+        </IconWrapper>
+      </Link>
+      <Link to={'/search'}>
+        <IconWrapper $pageActive={currentPage === 'search'}>
+          <Icon icon="uil:search" width="30" height="30" />
+        </IconWrapper>
+      </Link>
       <IconWrapper $pageActive={currentPage === 'shopping'}>
         <Icon icon="lucide:shopping-bag" width="30" height="30" />
       </IconWrapper>
-      <IconWrapper $pageActive={currentPage === 'profile'}>
+      <IconWrapper
+        $pageActive={currentPage === 'profile'}
+        onClick={() => setSideBar(!sideBar)}
+      >
         <Icon icon="tdesign:user-1" width="30" height="30" />
       </IconWrapper>
+      <SideBar active={sideBar} ref={sideBarRef} />
     </NavContainer>
   );
 };

@@ -6,7 +6,7 @@ import {
   ConfigText,
   StyledParagrath,
   UserConfigInfo,
-  BackButton,
+  BackLink,
   BackIconWrapper,
 } from './style';
 import { Icon } from '@iconify/react/dist/iconify.js';
@@ -14,18 +14,25 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 const Perfil = () => {
   return (
     <Container>
-      <BackButton>
+      <BackLink to="/">
         <BackIconWrapper>
           <Icon icon="tabler:chevron-left" width="30" height="30" />
         </BackIconWrapper>
         <span>Voltar</span>
-      </BackButton>
+      </BackLink>
       <ProfileImg src="/src/assets/foto-perfil.png" />
       <StyledParagrath>Configurações de Perfil</StyledParagrath>
       <ConfigsContainer>
         <Config>
           <ConfigText>
             <span>Alterar foto de usuário</span>
+          </ConfigText>
+          <Icon icon="tabler:chevron-right" width="30" height="30" />
+        </Config>
+        <Config>
+          <ConfigText>
+            <span>Alterar nome de usuário</span>
+            <UserConfigInfo>Rayssa</UserConfigInfo>
           </ConfigText>
           <Icon icon="tabler:chevron-right" width="30" height="30" />
         </Config>
@@ -66,13 +73,6 @@ const Perfil = () => {
         <Config>
           <ConfigText>
             <span>Excluir conta</span>
-          </ConfigText>
-          <Icon icon="tabler:chevron-right" width="30" height="30" />
-        </Config>
-        <Config>
-          <ConfigText>
-            <span>Alterar nome de usuário</span>
-            <UserConfigInfo>Rayssa</UserConfigInfo>
           </ConfigText>
           <Icon icon="tabler:chevron-right" width="30" height="30" />
         </Config>
