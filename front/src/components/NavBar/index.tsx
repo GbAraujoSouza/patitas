@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { IconWrapper, NavContainer } from './style';
+import { IconWrapper, NavContainer, OffSideBar } from './style';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import SideBar from '../SideBar';
@@ -10,8 +10,6 @@ interface NavBarProp {
 
 const NavBar = ({ currentPage }: NavBarProp) => {
   const [sideBar, setSideBar] = useState(false);
-
-  const toggleSideBar = (open:boolean) => setSideBar(open);
 
   const sideBarRef = useRef<HTMLDivElement>(null);
 
@@ -54,6 +52,7 @@ const NavBar = ({ currentPage }: NavBarProp) => {
         <Icon icon="tdesign:user-1" width="30" height="30" />
       </IconWrapper>
       <SideBar active={sideBar} ref={sideBarRef} />
+      <OffSideBar sidebar={sideBar} onClick={() => setSideBar(!sideBar)}></OffSideBar>
     </NavContainer>
   );
 };

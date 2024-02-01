@@ -2,19 +2,19 @@ import styled from 'styled-components';
 import { globalColors } from '../../global/globalStyles';
 import { Link } from 'react-router-dom';
 
-interface SideBarContainerProp {
+interface SideBarShowProp {
   sidebar: any;
 }
 
-export const SideBarContainer = styled.div<SideBarContainerProp>`
+export const SideBarContainer = styled.div<SideBarShowProp>`
   background-color: ${globalColors.lightBlue};
   position: fixed;
-  height: calc(100% - 62px);
+  height: 100%;
   top: 0;
   right: 0;
   width: 59.2%;
   right: ${(props) => (props.sidebar ? '0' : '-100%')};
-  transition: ease-in 0.4s;
+  transition: ease 0.2s;
   background-image: url('/src/assets/menu-bg.png');
   background-repeat: no-repeat;
   background-position: top right;
@@ -24,6 +24,7 @@ export const SideBarContainer = styled.div<SideBarContainerProp>`
   align-items: center;
   gap: 1.5rem;
   padding: 1.625rem;
+  z-index: 2;
 `;
 
 export const SideBarProfile = styled.div`
@@ -78,15 +79,15 @@ export const LinkIcon = styled(Link)`
 export const Divider = styled.hr`
   border-top: 1px solid ${globalColors.darkBlue};
   width: calc(100% + 3.1rem);
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 `;
 
 export const AppMenuOptions = styled.ul`
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.25rem;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.25rem;
+  list-style: none;
 `;
 
 export const AppMenuOption = styled.li`

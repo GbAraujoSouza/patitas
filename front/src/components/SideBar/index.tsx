@@ -56,21 +56,11 @@ const SideBar = ({ active, ref }: SideBarProps) => {
       </UserMenuOptions>
       <Divider />
       <AppMenuOptions>
-        <AppMenuOption>
-          Fale Conosco
-        </AppMenuOption>
-        <AppMenuOption>
-          Seja um Vendedor
-        </AppMenuOption>
-        <AppMenuOption>
-          Regras de Fidelidade
-        </AppMenuOption>
-        <AppMenuOption>
-          Termos de uso
-        </AppMenuOption>
-        <AppMenuOption>
-          Políticas de privacidade
-        </AppMenuOption>
+        <AppMenuOption>Fale Conosco</AppMenuOption>
+        <AppMenuOption>Seja um Vendedor</AppMenuOption>
+        <AppMenuOption>Regras de Fidelidade</AppMenuOption>
+        <AppMenuOption>Termos de uso</AppMenuOption>
+        <AppMenuOption>Políticas de privacidade</AppMenuOption>
       </AppMenuOptions>
     </SideBarContainer>
   );
