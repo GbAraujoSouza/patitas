@@ -42,10 +42,22 @@ const Home = () => {
       </CarouselContainer>
       <StyledH3>Meus Benefícios</StyledH3>
       <CarouselContainer>
-        <BenefitCard name={'Frete grátis'}></BenefitCard>
-        <BenefitCard name={'Cupons'}></BenefitCard>
-        <BenefitCard name={'Cashback'}></BenefitCard>
-        <BenefitCard name={'prêmios'}></BenefitCard>
+        <BenefitCard
+          imgSrc="/src/assets/icons/icone-frete-gratis.svg"
+          name={'Frete grátis'}
+        ></BenefitCard>
+        <BenefitCard
+          imgSrc="/src/assets/icons/icone-cupons.svg"
+          name={'Cupons'}
+        ></BenefitCard>
+        <BenefitCard
+          imgSrc="/src/assets/icons/icone-cashback.svg"
+          name={'Cashback'}
+        ></BenefitCard>
+        <BenefitCard
+          imgSrc="/src/assets/icons/icone-premios.svg"
+          name={'prêmios'}
+        ></BenefitCard>
       </CarouselContainer>
       <StyledH2>Recomendado para você</StyledH2>
       <CarouselContainer>
