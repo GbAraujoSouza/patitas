@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { IconWrapper, NavContainer, OffSideBar } from './style';
 import { Link } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import SideBar from '../SideBar';
 
 interface NavBarProp {
@@ -11,22 +11,6 @@ interface NavBarProp {
 const NavBar = ({ currentPage }: NavBarProp) => {
   const [sideBar, setSideBar] = useState(false);
 
-  const sideBarRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (sideBarRef.current && !sideBarRef.current.contains(event.target as Node)) {
-        setSideBar(!sideBar);
-      }
-    };
-
-    if(sideBar) {
-      document.addEventListener('click', handleOutsideClick);
-    }
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [sideBar])
 
   return (
     <NavContainer>
@@ -51,7 +35,7 @@ const NavBar = ({ currentPage }: NavBarProp) => {
       >
         <Icon icon="tdesign:user-1" width="30" height="30" />
       </IconWrapper>
-      <SideBar active={sideBar} ref={sideBarRef} />
+      <SideBar active={sideBar} />
       <OffSideBar sidebar={sideBar} onClick={() => setSideBar(!sideBar)}></OffSideBar>
     </NavContainer>
   );

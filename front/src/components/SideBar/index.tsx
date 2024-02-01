@@ -12,13 +12,12 @@ import {
 
 interface SideBarProps {
   active: boolean;
-  ref: any;
 }
 
-const SideBar = ({ active, ref }: SideBarProps) => {
+const SideBar = ({ active }: SideBarProps) => {
 
   return (
-    <SideBarContainer ref={ref} sidebar={active}>
+    <SideBarContainer sidebar={active}>
       <UserMenuOption>
         <LinkIcon to="/profile">
           <Icon icon="mi:settings" width="30" height="30" />
