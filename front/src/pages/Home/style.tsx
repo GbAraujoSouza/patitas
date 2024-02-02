@@ -23,6 +23,7 @@ export const CarouselContainer = styled.section`
 `;
 
 export const StyledH3 = styled.h3`
+  font-family: 'Poppins', sans-serif;
   font-weight: semibold;
   text-decoration: underline;
   font-size: 15px;

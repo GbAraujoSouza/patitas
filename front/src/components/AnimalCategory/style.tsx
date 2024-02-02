@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { globalColors } from '../../global/globalStyles';
 
 export const RoundImage = styled.img`
   border-radius: 50%;
@@ -12,6 +13,9 @@ export const AnimalCategoryContainer = styled.div`
   align-items: center;
 `;
 
-export const AnimalType = styled.p `
+export const AnimalType = styled.p`
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: ${globalColors.darkBlue};
   font-size: 0.875em;
-`
+`;
