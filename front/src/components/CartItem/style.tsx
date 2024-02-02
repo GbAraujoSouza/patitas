@@ -8,6 +8,7 @@ export const CartItemContainer = styled.div`
   padding: 1.25rem 1rem 1rem 0.625rem;
   background-color: ${globalColors.white};
   border-radius: 18px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 `
 
 export const CartImg = styled.img`
