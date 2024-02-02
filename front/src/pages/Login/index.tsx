@@ -2,15 +2,15 @@ import {
   ButtonsContainer,
   FormButton,
   FormButtonLink,
+  FormPageContainer,
   InputContainer,
-  LoginPageContainer,
   StyledForm,
   StyledLabel,
 } from './style';
 
 function Login() {
   return (
-    <LoginPageContainer>
+    <FormPageContainer>
       <img src="/public/logo-formularios.png" alt="Logo patitas" />
       <img src="/public/login-img.png" alt="patinhas de cachorro" />
       <StyledForm action="">
@@ -22,13 +22,13 @@ function Login() {
             width={24}
             height={24}
           />
-          <input type="text" id="login" required/>
+          <input type="text" id="login" required placeholder='Digite sua ...'/>
         </InputContainer>
 
         <StyledLabel htmlFor="senha">Senha</StyledLabel>
         <InputContainer>
           <img src="/src/assets/icons/icone-senha.svg" alt="" />
-          <input type="password" id="senha" required/>
+          <input type="password" id="senha" required placeholder='Digite sua ...'/>
         </InputContainer>
         <a href="">Esqueceu sua senha?</a>
         <ButtonsContainer>
@@ -40,7 +40,7 @@ function Login() {
           </FormButton>
         </ButtonsContainer>
       </StyledForm>
-    </LoginPageContainer>
+    </FormPageContainer>
   );
 }
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { globalColors } from '../../global/globalStyles';
 import { Link } from 'react-router-dom';
 
-export const LoginPageContainer = styled.main`
+export const FormPageContainer = styled.main`
   background-color: ${globalColors.white};
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@ export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding-top: 5.625rem;
+  padding-top: 3.5rem;
 `;
 
 export const FormButton = styled.button`

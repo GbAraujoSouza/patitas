@@ -5,6 +5,7 @@ import Perfil from "../pages/Perfil";
 import Search from "../pages/Search";
 import Cart from "../pages/Cart";
 import Login from "../pages/Login";
+import Cadastro from "../pages/Cadastro";
 import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 
@@ -19,6 +20,7 @@ const Router = () => {
           <Route element={<Perfil />} path="/profile" />
           <Route element={<Cart />} path="/cart" />
           <Route element={<Login />} path="/login" />
+          <Route element={<Cadastro />} path="/cadastro" />
         </Routes>
       </ShoppingCartProvider>
     </BrowserRouter>
