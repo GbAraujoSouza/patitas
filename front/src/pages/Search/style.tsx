@@ -15,7 +15,7 @@ export const Container = styled.div`
   padding: 1em;
   align-items: center;
   justify-content: start;
-  background-image: url('/src/assets/search-page-bg.png');
+  background-image: url('/search-page-bg.png');
   background-position: bottom right;
   background-repeat: no-repeat;
 `;

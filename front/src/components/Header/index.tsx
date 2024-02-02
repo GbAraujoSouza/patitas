@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header = ({showAddress, userAddress}: HeaderProps) => {
   return (
     <Container>
-      <Image src={'/src/assets/logo.svg'} alt="logo-patitas" />
+      <Image src={'/logo-header.svg'} alt="logo-patitas" />
       {showAddress && <HeaderAddress>
         <Icon icon="ph:map-pin" width="30" height="30" />
         <AddressInfo>

@@ -14,7 +14,7 @@ const Fidelidade = () => {
       <FidelidadePageContainer>
         <ImageLogo
           paddingBottom="0"
-          src="/src/assets/logo-pequena.png"
+          src="/logo-pequena.png"
           alt="Logo Patitas"
         />
         <FidelidadeH1 color={globalColors.darkBlue}>
@@ -22,19 +22,19 @@ const Fidelidade = () => {
         </FidelidadeH1>
         <FidelidadeCardsContaier>
           <BenefitCard
-            imgSrc="/src/assets/icons/icone-frete-gratis.svg"
+            imgSrc="/icons/icone-frete-gratis.svg"
             name={'Frete grátis'}
           ></BenefitCard>
           <BenefitCard
-            imgSrc="/src/assets/icons/icone-gato.svg"
+            imgSrc="/icons/icone-gato.svg"
             name={'Cartão de vacina'}
           ></BenefitCard>
           <BenefitCard
-            imgSrc="/src/assets/icons/icone-premios.svg"
+            imgSrc="/icons/icone-premios.svg"
             name={'prêmios'}
           ></BenefitCard>
           <BenefitCard
-            imgSrc="/src/assets/icons/icone-cupons.svg"
+            imgSrc="/icons/icone-cupons.svg"
             name={'Cupons'}
           ></BenefitCard>
         </FidelidadeCardsContaier>

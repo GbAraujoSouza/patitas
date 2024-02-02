@@ -13,7 +13,7 @@ export const FidelidadePageContainer = styled.div`
   gap: 3.4%;
   align-items: center;
   justify-content: start;
-  background-image: url('/src/assets/fidelidade-page-bg.png');
+  background-image: url('/bg-images/fidelidade-page-bg.png');
   background-position: bottom right;
   background-repeat: no-repeat;
   & p {

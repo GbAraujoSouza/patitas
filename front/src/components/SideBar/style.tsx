@@ -15,7 +15,7 @@ export const SideBarContainer = styled.div<SideBarContainerProp>`
   width: 59.2%;
   right: ${(props) => (props.sidebar ? '0' : '-100%')};
   transition: ease 0.2s;
-  background-image: url('/src/assets/menu-bg.png');
+  background-image: url('/menu-bg.png');
   background-repeat: no-repeat;
   background-position: top right;
   border-radius: 18px 0 0 18px;

@@ -1,4 +1,11 @@
-import { Badge, CarouselContainer, CartIconLink, PageContainer, StyledH2, StyledH3 } from './style';
+import {
+  Badge,
+  CarouselContainer,
+  CartIconLink,
+  PageContainer,
+  StyledH2,
+  StyledH3,
+} from './style';
 import Header from '../../components/Header';
 import AnimalCategory from '../../components/AnimalCategory';
 import BenefitCard from '../../components/BenefitCard';
@@ -15,47 +22,47 @@ const Home = () => {
     <PageContainer>
       <Header showAddress userAddress="Rua Dionísio, 72 - apt 402"></Header>
       <CartIconLink to={'/cart'}>
-        <img src="/src/assets/icons/icone-cart.svg" alt="" />
+        <img src="/icons/icone-cart.svg" alt="" />
         <Badge cartQuantity={cartQuantity}>{cartQuantity}</Badge>
       </CartIconLink>
       <CarouselContainer>
         <AnimalCategory
           type="Cachorro"
-          imgSrc={'/src/assets/cachorro-logo.png'}
+          imgSrc={'/pets-logos/cachorro-logo.png'}
         ></AnimalCategory>
         <AnimalCategory
           type="Gatos"
-          imgSrc={'/src/assets/gato-logo.png'}
+          imgSrc={'/pets-logos/gato-logo.png'}
         ></AnimalCategory>
         <AnimalCategory
           type="Peixes"
-          imgSrc={'/src/assets/peixe-logo.png'}
+          imgSrc={'/pets-logos/peixe-logo.png'}
         ></AnimalCategory>
         <AnimalCategory
           type="Aves"
-          imgSrc={'/src/assets/ave-logo.png'}
+          imgSrc={'/pets-logos/ave-logo.png'}
         ></AnimalCategory>
         <AnimalCategory
           type="Exóoicos"
-          imgSrc={'/src/assets/exoicos-logo.png'}
+          imgSrc={'/pets-logos/exoicos-logo.png'}
         ></AnimalCategory>
       </CarouselContainer>
       <StyledH3>Meus Benefícios</StyledH3>
       <CarouselContainer>
         <BenefitCard
-          imgSrc="/src/assets/icons/icone-frete-gratis.svg"
+          imgSrc="/icons/icone-frete-gratis.svg"
           name={'Frete grátis'}
         ></BenefitCard>
         <BenefitCard
-          imgSrc="/src/assets/icons/icone-cupons.svg"
+          imgSrc="/icons/icone-cupons.svg"
           name={'Cupons'}
         ></BenefitCard>
         <BenefitCard
-          imgSrc="/src/assets/icons/icone-cashback.svg"
+          imgSrc="/icons/icone-cashback.svg"
           name={'Cashback'}
         ></BenefitCard>
         <BenefitCard
-          imgSrc="/src/assets/icons/icone-premios.svg"
+          imgSrc="/icons/icone-premios.svg"
           name={'prêmios'}
         ></BenefitCard>
       </CarouselContainer>

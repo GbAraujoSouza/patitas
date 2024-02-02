@@ -17,7 +17,7 @@ interface CardProdutProps {
 }
 
 const CardProdut = ({ id, imgSrc, name, price }: CardProdutProps) => {
-  const {increaseCartQuatity} = useShoppingCart()
+  const { increaseCartQuatity } = useShoppingCart();
 
   return (
     <Card>
@@ -31,7 +31,7 @@ const CardProdut = ({ id, imgSrc, name, price }: CardProdutProps) => {
           </ProductPrice>
         </InfoCard>
         <AddProduct
-          src="/src/assets/icons/Botao-de-mais.svg"
+          src="/icons/Botao-de-mais.svg"
           alt=""
           onClick={() => increaseCartQuatity(id)}
         />

@@ -15,7 +15,7 @@ const Search = () => {
     <>
       <Container>
         <ImageLogo
-          src="/src/assets/logo-pequena.png"
+          src="/logo-pequena.png"
           alt="Logo Patitas"
           paddingBottom="1rem"
         />

@@ -24,7 +24,7 @@ const SideBar = ({ active }: SideBarProps) => {
         </LinkIcon>
       </UserMenuOption>
       <SideBarProfile>
-        <img src="/src/assets/foto-perfil.png" alt="foto de perfil" />
+        <img src="/foto-perfil.png" alt="foto de perfil" />
         <p>Olá, Rayssa</p>
         <p>Sair da conta</p>
       </SideBarProfile>
