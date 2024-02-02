@@ -38,6 +38,7 @@
     "id_product": 6,
     "name": "Ração Pedigree Nutrição Essen...",
     "price": 399.99,
+    "type": "racao",
     "imgUrl": "/src/assets/product-images/Produto6-img.png"
   },
   {
@@ -79,7 +80,7 @@
     "id_product": 12,
     "name": "Mordedor Bonequinha Pet Games ...",
     "price": 40.00,
-    "type": "racao",
+    "type": "brinquedo",
     "imgUrl": "/src/assets/product-images/Produto12-img.png"
   },
   {

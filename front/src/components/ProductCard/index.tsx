@@ -6,6 +6,7 @@ import {
   InfoCard,
   ProductName,
   ProductPrice,
+  AddProduct,
 } from './style';
 
 interface CardProdutProps {
@@ -29,7 +30,11 @@ const CardProdut = ({ id, imgSrc, name, price }: CardProdutProps) => {
             {price}
           </ProductPrice>
         </InfoCard>
-        <img src="/src/assets/icons/Botao-de-mais.svg" alt="" onClick={() => increaseCartQuatity(id)}/>
+        <AddProduct
+          src="/src/assets/icons/Botao-de-mais.svg"
+          alt=""
+          onClick={() => increaseCartQuatity(id)}
+        />
       </CardBody>
     </Card>
   );

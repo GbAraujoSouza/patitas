@@ -8,7 +8,8 @@ export const Card = styled.div`
   flex-direction: column;
   gap: 1em;
   flex: none;
-  max-width: 132px;
+  width: 8.25rem;
+  max-height: 10.38em;
   background-color: ${globalColors.white};
   border-radius: 18px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
@@ -25,8 +26,8 @@ export const Image = styled.img`
 
 export const CardBody = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  position: relative;
 `;
 
 export const InfoCard = styled.div`
@@ -40,12 +41,18 @@ export const ProductName = styled.p`
   margin: 0;
   padding: 0;
   font-size: 10px;
-  /* overflow: hidden;
+  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
 `;
 export const ProductPrice = styled.p`
   margin: 0;
   padding: 0;
   font-size: 14px;
+`;
+
+export const AddProduct = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
 `;
