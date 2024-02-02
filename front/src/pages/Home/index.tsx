@@ -1,4 +1,4 @@
-import { CarouselContainer, PageContainer, StyledH2, StyledH3 } from './style';
+import { Badge, CarouselContainer, CartIconLink, PageContainer, StyledH2, StyledH3 } from './style';
 import Header from '../../components/Header';
 import AnimalCategory from '../../components/AnimalCategory';
 import BenefitCard from '../../components/BenefitCard';
@@ -6,11 +6,18 @@ import ProductCard from '../../components/ProductCard';
 import NavBar from '../../components/NavBar';
 import productsStored from '../../constants/products.json';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { useShoppingCart } from '../../context/ShoppingCartContext';
 
 const Home = () => {
+  const { cartQuantity } = useShoppingCart();
+
   return (
     <PageContainer>
       <Header showAddress userAddress="Rua Dionísio, 72 - apt 402"></Header>
+      <CartIconLink to={'/cart'}>
+        <img src="/src/assets/icons/icone-cart.svg" alt="" />
+        <Badge cartQuantity={cartQuantity}>{cartQuantity}</Badge>
+      </CartIconLink>
       <CarouselContainer>
         <AnimalCategory
           type="Cachorro"

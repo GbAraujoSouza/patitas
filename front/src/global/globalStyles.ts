@@ -6,6 +6,7 @@ export const globalColors = {
   white: '#F2F3F3',
   mostarda: '#EDA61A',
   darkOrange: '#E97B0C',
+  turquesa: '#3E99B4',
 };
 
 export const GlobalStyle = createGlobalStyle`
