@@ -11,7 +11,7 @@ import {
 interface CardProdutProps {
   id: number;
   name: string;
-  price: number;
+  price: string;
   imgSrc: string;
 }
 
@@ -25,7 +25,7 @@ const CardProdut = ({ id, imgSrc, name, price }: CardProdutProps) => {
         <InfoCard>
           <ProductName>{name}</ProductName>
           <ProductPrice>
-            <strong>R$</strong>
+            <strong>R$ </strong>
             {price}
           </ProductPrice>
         </InfoCard>

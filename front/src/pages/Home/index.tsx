@@ -5,9 +5,9 @@ import BenefitCard from '../../components/BenefitCard';
 import ProductCard from '../../components/ProductCard';
 import NavBar from '../../components/NavBar';
 import productsStored from '../../constants/products.json';
+import { formatCurrency } from '../../utils/formatCurrency';
 
 const Home = () => {
-
   return (
     <PageContainer>
       <Header showAddress userAddress="Rua Dionísio, 72 - apt 402"></Header>
@@ -62,7 +62,7 @@ const Home = () => {
                 key={id_product}
                 id={id_product}
                 name={name}
-                price={price}
+                price={formatCurrency(price)}
                 imgSrc={imgUrl}
               />
             );
@@ -79,7 +79,7 @@ const Home = () => {
                 key={id_product}
                 id={id_product}
                 name={name}
-                price={price}
+                price={formatCurrency(price)}
                 imgSrc={imgUrl}
               />
             );
@@ -96,7 +96,7 @@ const Home = () => {
                 key={id_product}
                 id={id_product}
                 name={name}
-                price={price}
+                price={formatCurrency(price)}
                 imgSrc={imgUrl}
               />
             );
@@ -113,7 +113,7 @@ const Home = () => {
                 key={id_product}
                 id={id_product}
                 name={name}
-                price={price}
+                price={formatCurrency(price)}
                 imgSrc={imgUrl}
               />
             );
