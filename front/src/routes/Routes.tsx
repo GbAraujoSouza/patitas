@@ -4,6 +4,7 @@ import Fidelidade from "../pages/Fidelidade";
 import Perfil from "../pages/Perfil";
 import Search from "../pages/Search";
 import Cart from "../pages/Cart";
+import Login from "../pages/Login";
 import { ShoppingCartProvider } from "../context/ShoppingCartContext";
 
 
@@ -17,6 +18,7 @@ const Router = () => {
           <Route element={<Fidelidade />} path="/fidelidade" />
           <Route element={<Perfil />} path="/profile" />
           <Route element={<Cart />} path="/cart" />
+          <Route element={<Login />} path="/login" />
         </Routes>
       </ShoppingCartProvider>
     </BrowserRouter>
