@@ -5,7 +5,7 @@ import {
   SearchInput,
   CategoryContainer,
   Category,
-  BotaoFidelidade,
+  ButtonLinkFidelidade,
 } from './style';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import NavBar from '../../components/NavBar';
@@ -14,7 +14,11 @@ const Search = () => {
   return (
     <>
       <Container>
-        <ImageLogo src="/src/assets/logo-pequena.png" alt="Logo Patitas" />
+        <ImageLogo
+          src="/src/assets/logo-pequena.png"
+          alt="Logo Patitas"
+          paddingBottom="1rem"
+        />
         <SearchBar>
           <label htmlFor="search">
             <Icon icon="uil:search" width="24" height="24" />
@@ -36,10 +40,10 @@ const Search = () => {
           <Category>Acessório</Category>
           <Category>Alimento</Category>
         </CategoryContainer>
-        <BotaoFidelidade>
+        <ButtonLinkFidelidade to={'/fidelidade'}>
           Assine noss programa de fidelidade
           <Icon icon="ei:chevron-right" width="30" height="30" />
-        </BotaoFidelidade>
+        </ButtonLinkFidelidade>
       </Container>
       <NavBar currentPage="search"></NavBar>
     </>

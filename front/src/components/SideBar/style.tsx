@@ -96,4 +96,8 @@ export const AppMenuOption = styled.li`
   color: ${globalColors.darkBlue};
   align-items: start;
   white-space: nowrap;
+  & > a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;

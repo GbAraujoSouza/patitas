@@ -9,13 +9,13 @@ import {
   AppMenuOption,
   LinkIcon,
 } from './style';
+import { Link } from 'react-router-dom';
 
 interface SideBarProps {
   active: boolean;
 }
 
 const SideBar = ({ active }: SideBarProps) => {
-
   return (
     <SideBarContainer sidebar={active}>
       <UserMenuOption>
@@ -57,7 +57,9 @@ const SideBar = ({ active }: SideBarProps) => {
       <AppMenuOptions>
         <AppMenuOption>Fale Conosco</AppMenuOption>
         <AppMenuOption>Seja um Vendedor</AppMenuOption>
-        <AppMenuOption>Regras de Fidelidade</AppMenuOption>
+        <AppMenuOption>
+          <Link to={'/fidelidade'}>Regras de Fidelidade</Link>
+        </AppMenuOption>
         <AppMenuOption>Termos de uso</AppMenuOption>
         <AppMenuOption>Políticas de privacidade</AppMenuOption>
       </AppMenuOptions>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { globalColors } from '../../global/globalStyles';
+import { Link } from 'react-router-dom';
 
 interface ImageLogoProps {
   paddingBottom: string;
@@ -62,9 +63,10 @@ export const Category = styled.div`
   height: 48px;
 `;
 
-export const BotaoFidelidade = styled.button`
+export const ButtonLinkFidelidade = styled(Link)`
   height: 48px;
   color: ${globalColors.darkBlue};
+  text-decoration: none;
   background-color: #bdc7cc;
   border-radius: 20px;
   display: flex;
